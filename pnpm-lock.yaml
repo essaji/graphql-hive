@@ -142,7 +142,7 @@ importers:
     specifiers:
       '@manypkg/get-packages': 1.1.3
       '@pulumi/azure': 5.23.0
-      '@pulumi/cloudflare': 4.12.1
+      '@pulumi/cloudflare': npm:@kamilkisiela/pulumi-cloudflare@4.13.0-alpha.1668644378
       '@pulumi/kubernetes': 3.22.0
       '@pulumi/kubernetesx': 0.1.6
       '@pulumi/pulumi': 3.44.1
@@ -153,7 +153,7 @@ importers:
     dependencies:
       '@manypkg/get-packages': 1.1.3
       '@pulumi/azure': 5.23.0_@types+node@18.11.5
-      '@pulumi/cloudflare': 4.12.1_@types+node@18.11.5
+      '@pulumi/cloudflare': /@kamilkisiela/pulumi-cloudflare/4.13.0-alpha.1668644378_@types+node@18.11.5
       '@pulumi/kubernetes': 3.22.0_@types+node@18.11.5
       '@pulumi/kubernetesx': 0.1.6_4nb45s7bfaeitoedysz62indmm
       '@pulumi/pulumi': 3.44.1_@types+node@18.11.5
@@ -442,7 +442,7 @@ importers:
 
   packages/services/cdn-worker:
     specifiers:
-      '@cloudflare/workers-types': 3.4.0
+      '@cloudflare/workers-types': 4.20221111.1
       '@types/service-worker-mock': 2.0.1
       '@whatwg-node/fetch': 0.4.7
       '@whatwg-node/server': 0.4.11
@@ -456,7 +456,7 @@ importers:
       graphql: 16.5.0
       toucan-js: 2.7.0
     devDependencies:
-      '@cloudflare/workers-types': 3.4.0
+      '@cloudflare/workers-types': 4.20221111.1
       '@types/service-worker-mock': 2.0.1
       '@whatwg-node/fetch': 0.4.7
       '@whatwg-node/server': 0.4.11
@@ -4318,6 +4318,10 @@ packages:
     resolution: {integrity: sha512-i/3czUrt6YqbOWl44OtIqd0cSZvEVXp/1oD/DZylC4PHZL3q/BhbamdEVeVhc/HPk4iD/7MZ2HGaIMO4Z4b12A==}
     dev: true
 
+  /@cloudflare/workers-types/4.20221111.1:
+    resolution: {integrity: sha512-BNV2wN8V6Zduvo7UzxcdjBbLQ906D2KhS804PDufLgx/sanGJCHVJMOIaLvS/b61JKtot1U7P/l1fjrjZ7/E3A==}
+    dev: true
+
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
@@ -5909,6 +5913,18 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
+  /@kamilkisiela/pulumi-cloudflare/4.13.0-alpha.1668644378_@types+node@18.11.5:
+    resolution: {integrity: sha512-nkJh3pbH7DWgKeXh8OQvUa7I2/HMPZllKGSKbeNY89nI5ONf79L6vgXJreWAQabZSK0x1LEztxDSbmX26UA69g==}
+    requiresBuild: true
+    dependencies:
+      '@pulumi/pulumi': 3.44.1_@types+node@18.11.5
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - supports-color
+    dev: false
+
   /@lit/reactive-element/1.4.2:
     resolution: {integrity: sha512-VMOxsWh/QDwrxPsgkSQnuZ+8mfNy1OTjzzUdLBvvZtpahwPTHTeVZ51RZRqO4xfKVrR+btIPA8D01IL3xeG66w==}
     dev: false
@@ -7279,18 +7295,6 @@ packages:
       - '@types/node'
       - debug
       - encoding
-      - supports-color
-    dev: false
-
-  /@pulumi/cloudflare/4.12.1_@types+node@18.11.5:
-    resolution: {integrity: sha512-ee7x+hK3qA+dfwynJ9oFbQ3vGqygIXc/Wf+UjbLPcfezMntIKiJmE5HcXlnpJayOEd8LzIRKutpVf2196A2hbQ==}
-    requiresBuild: true
-    dependencies:
-      '@pulumi/pulumi': 3.44.1_@types+node@18.11.5
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
       - supports-color
     dev: false
 

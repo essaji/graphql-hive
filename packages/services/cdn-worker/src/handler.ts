@@ -6,6 +6,7 @@ import {
   MissingAuthKey,
   MissingTargetIDErrorResponse,
 } from './errors';
+import { track } from './analytics';
 import { isKeyValid } from './auth';
 import { buildSchema, introspectionFromSchema } from 'graphql';
 
@@ -170,6 +171,8 @@ export async function handleRequest(request: Request, keyValidator: typeof isKey
     if (ifNoneMatch && ifNoneMatch === etag) {
       return new Response(null, { status: 304 });
     }
+
+    track({ type: 'artifact', value: artifactType }, targetId);
 
     switch (artifactType) {
       case 'schema':

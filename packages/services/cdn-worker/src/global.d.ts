@@ -1,10 +1,19 @@
 export {};
 
+interface AnalyticsEngine {
+  writeDataPoint(input: { blobs?: string[]; doubles?: number[]; indexes?: string[] }): void;
+}
+
 declare global {
   /**
    * KV Storage for the CDN
    */
   let HIVE_DATA: KVNamespace;
+  /**
+   * Analytics Engine for the CDN
+   */
+  let USAGE_ANALYTICS: AnalyticsEngine;
+  let ERROR_ANALYTICS: AnalyticsEngine;
   /**
    * Secret used to sign the CDN keys
    */

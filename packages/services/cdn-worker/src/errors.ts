@@ -1,3 +1,5 @@
+import { track } from './analytics';
+
 const description = `Please refer to the documentation for more details: https://docs.graphql-hive.com/features/registry-usage`;
 
 export class MissingTargetIDErrorResponse extends Response {
@@ -12,6 +14,8 @@ export class MissingTargetIDErrorResponse extends Response {
         status: 400,
       },
     );
+
+    track({ type: 'error', value: ['missing_target_id'] }, 'unknown');
   }
 }
 
@@ -27,6 +31,7 @@ export class InvalidArtifactTypeResponse extends Response {
         status: 400,
       },
     );
+    track({ type: 'error', value: ['invalid_artifact_type', artifactType] }, 'unknown');
   }
 }
 
@@ -42,6 +47,7 @@ export class MissingAuthKey extends Response {
         status: 400,
       },
     );
+    track({ type: 'error', value: ['missing_auth_key'] }, 'unknown');
   }
 }
 
@@ -57,6 +63,7 @@ export class InvalidAuthKey extends Response {
         status: 403,
       },
     );
+    track({ type: 'error', value: ['invalid_auth_key'] }, 'unknown');
   }
 }
 
@@ -72,6 +79,7 @@ export class CDNArtifactNotFound extends Response {
         status: 404,
       },
     );
+    track({ type: 'error', value: ['artifact_not_found', artifactType] }, targetId);
   }
 }
 
@@ -87,6 +95,7 @@ export class InvalidArtifactMatch extends Response {
         status: 400,
       },
     );
+    track({ type: 'error', value: ['invalid_artifact_match', artifactType] }, targetId);
   }
 }
 
