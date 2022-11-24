@@ -363,7 +363,7 @@ importers:
       p-retry: 5.1.1
       p-timeout: 5.0.2
       param-case: 3.0.4
-      supertokens-node: 12.0.5
+      supertokens-node: 12.1.0
       tslib: 2.4.1
       uuid: 8.3.2
       zod: 3.15.1
@@ -397,7 +397,7 @@ importers:
       p-retry: 5.1.1
       p-timeout: 5.0.2
       param-case: 3.0.4
-      supertokens-node: 12.0.5
+      supertokens-node: 12.1.0
       uuid: 8.3.2
       zod: 3.15.1
     devDependencies:
@@ -1007,9 +1007,9 @@ importers:
       regenerator-runtime: 0.13.10
       rimraf: 3.0.2
       snarkdown: 2.0.0
-      supertokens-auth-react: 0.27.1
+      supertokens-auth-react: 0.27.2
       supertokens-js-override: 0.0.4
-      supertokens-node: 12.0.5
+      supertokens-node: 12.1.0
       supertokens-website: 14.0.2
       tailwindcss: 2.2.19
       tailwindcss-radix: 2.2.0
@@ -1086,9 +1086,9 @@ importers:
       react-window: 1.8.8_sfoxds7t5ydpegc3knd667wn6m
       regenerator-runtime: 0.13.10
       snarkdown: 2.0.0
-      supertokens-auth-react: 0.27.1_k2mvpji5i2ojml6m4ftklg47pa
+      supertokens-auth-react: 0.27.2_k2mvpji5i2ojml6m4ftklg47pa
       supertokens-js-override: 0.0.4
-      supertokens-node: 12.0.5
+      supertokens-node: 12.1.0
       supertokens-website: 14.0.2
       twin.macro: 2.8.2
       urql: 2.0.5_mnlteiidv5se4zpyvopwg4rohq
@@ -10672,7 +10672,7 @@ packages:
   /axios/0.21.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.15.2_debug@4.3.4
+      follow-redirects: 1.15.2
     transitivePeerDependencies:
       - debug
     dev: false
@@ -13322,7 +13322,7 @@ packages:
     dev: false
 
   /ee-first/1.1.1:
-    resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
+    resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
     dev: false
 
   /ejs/3.1.8:
@@ -14888,6 +14888,16 @@ packages:
 
   /focus-visible/5.2.0:
     resolution: {integrity: sha512-Rwix9pBtC1Nuy5wysTmKy+UjbDJpIfg8eHjw0rjZ1mX4GNLz1Bmd16uDpI3Gk1i70Fgcs8Csg2lPm8HULFg9DQ==}
+    dev: false
+
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /follow-redirects/1.15.2_debug@4.3.4:
@@ -18278,7 +18288,7 @@ packages:
     dev: false
 
   /media-typer/0.3.0:
-    resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
+    resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=}
     engines: {node: '>= 0.6'}
     dev: false
 
@@ -23510,8 +23520,8 @@ packages:
       - supports-color
     dev: false
 
-  /supertokens-auth-react/0.27.1_k2mvpji5i2ojml6m4ftklg47pa:
-    resolution: {integrity: sha512-g4a8idSPF1Fa7mN5u0QTNlIHor/1OwRhgKd3IXgEZoDngmm0wDEii97JDTHUr8gGhFBp0pi/UtGka/UQ6MTdFg==}
+  /supertokens-auth-react/0.27.2_k2mvpji5i2ojml6m4ftklg47pa:
+    resolution: {integrity: sha512-snlHEi0TUIoumANwctYf3fGXSBvvGpdmdaBTr2TEVXw486OJqopOOX2b1QznUMoHYVHPI3igGkSVeSA4BbZtog==}
     engines: {node: '>=16.0.0', npm: ^8}
     peerDependencies:
       react: '>=16.8.0'
@@ -23536,8 +23546,8 @@ packages:
     resolution: {integrity: sha512-r0JFBjkMIdep3Lbk3JA+MpnpuOtw4RSyrlRAbrzMcxwiYco3GFWl/daimQZ5b1forOiUODpOlXbSOljP/oyurg==}
     dev: false
 
-  /supertokens-node/12.0.5:
-    resolution: {integrity: sha512-8uDa8D0pF6+NmWpFOr0e+FoHTD2OsISYXw4cVBCg6h8jlrbdaFAZmpMsbQ8YDiYFDWvIqJKDBjxsVZCVk/gS2g==}
+  /supertokens-node/12.1.0:
+    resolution: {integrity: sha512-twPv7kFLNjRzUNTBCgdZgj32w1GC4qzWvINmpjbHOJG7QV3OFs7SnjTODIzY/w46V5KDPADGegFGqsQWBrs69w==}
     dependencies:
       axios: 0.21.4_debug@4.3.4
       body-parser: 1.19.0
@@ -24868,7 +24878,7 @@ packages:
       normalize-path: 2.1.1
 
   /unpipe/1.0.0:
-    resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
+    resolution: {integrity: sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=}
     engines: {node: '>= 0.8'}
     dev: false
 
